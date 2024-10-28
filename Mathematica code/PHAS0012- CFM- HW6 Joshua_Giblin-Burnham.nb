@@ -1,0 +1,1283 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     54813,       1275]
+NotebookOptionsPosition[     48386,       1187]
+NotebookOutlinePosition[     49232,       1215]
+CellTagsIndexPosition[     49189,       1212]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["PHAS0012 Computing for Mathematical Physics  2019/20",
+ 
+ FontFamily->"Gill Sans MT",
+ FontSize->36,
+ FontColor->RGBColor[0.5, 0, 0.5]]], "Subtitle",
+ CellChangeTimes->{{3.725026163409854*^9, 3.72502616476091*^9}, {
+   3.725050500981072*^9, 3.725050502853321*^9}, 3.7553445928754253`*^9, {
+   3.7915752311517415`*^9, 3.7915752361932516`*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"f5719df8-fa83-4fe8-afb1-defda8c17687"],
+
+Cell[TextData[StyleBox["Homework 6",
+ FontSize->24,
+ FontColor->GrayLevel[0.5]]], "Title",
+ CellChangeTimes->{
+  3.724350863230672*^9, {3.7554377965759945`*^9, 3.7554377970610547`*^9}, {
+   3.755437883966379*^9, 3.7554378986990423`*^9}, {3.755438238681673*^9, 
+   3.755438269628213*^9}, {3.7556100400708838`*^9, 3.7556100406176205`*^9}, 
+   3.7556102568192472`*^9, {3.756505681553753*^9, 3.756505681788164*^9}, {
+   3.757103637090299*^9, 3.7571036377702055`*^9}, {3.7595638142404757`*^9, 
+   3.7595638143641405`*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"f2d3e093-4ec6-40c5-b185-3c59ba978920"],
+
+Cell[TextData[{
+ StyleBox["Mark for homework 6:   \t\t/44\n",
+  FontSize->24,
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox["(to be competed by your marker)",
+  FontSize->18,
+  FontColor->RGBColor[1, 0, 1]]
+}], "Title",
+ CellFrame->{{0, 0}, {0, 3}},
+ CellChangeTimes->{
+  3.724350863230672*^9, {3.7554377965759945`*^9, 3.7554377970610547`*^9}, {
+   3.755437883966379*^9, 3.7554378986990423`*^9}, {3.755438238681673*^9, 
+   3.755438269628213*^9}, {3.7556100400708838`*^9, 3.7556100406176205`*^9}, 
+   3.7556102593969035`*^9, {3.755610309382546*^9, 3.7556103428416023`*^9}, 
+   3.755610433287775*^9, 3.7556107927551785`*^9, {3.7556108468979297`*^9, 
+   3.7556108555696487`*^9}, {3.7565056838908806`*^9, 3.756505684031426*^9}, {
+   3.756505719469152*^9, 3.7565057204026833`*^9}, {3.7571036326603785`*^9, 
+   3.757103640164131*^9}, {3.7595638172245045`*^9, 3.7595638197796755`*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"b44cf058-ec71-428a-a9e4-31cdda19dfc3"],
+
+Cell[TextData[{
+ StyleBox["Feedback from marker:",
+  FontSize->24,
+  FontColor->RGBColor[1., 0., 1.]],
+ StyleBox["\n",
+  FontSize->24],
+ StyleBox["(to be competed by your marker)",
+  FontSize->18,
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox["\n\n",
+  FontSize->24]
+}], "Title",
+ CellFrame->{{0, 0}, {0, 3}},
+ CellChangeTimes->{
+  3.724350863230672*^9, {3.7554377965759945`*^9, 3.7554377970610547`*^9}, {
+   3.755437883966379*^9, 3.7554378986990423`*^9}, {3.755438238681673*^9, 
+   3.755438269628213*^9}, {3.7556100400708838`*^9, 3.7556100406176205`*^9}, 
+   3.7556102593969035`*^9, {3.755610309382546*^9, 3.7556103428416023`*^9}, 
+   3.755610458790455*^9, 3.7556108665835867`*^9},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"05e1e3ba-7aa4-4a8b-ad50-ccf054f3b9ec"],
+
+Cell[TextData[{
+ StyleBox["Which ",
+  FontSize->24,
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox["feedback from your last homework",
+  FontSize->24,
+  FontWeight->"Bold",
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox[" are you ",
+  FontSize->24,
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox["employing in this homework",
+  FontSize->24,
+  FontWeight->"Bold",
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox["? \n",
+  FontSize->24,
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox["Marks will be deducted",
+  FontSize->24,
+  FontWeight->"Bold",
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox[" if you do not",
+  FontSize->24,
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox[" ",
+  FontSize->24,
+  FontWeight->"Bold",
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox["complete this section.",
+  FontSize->24,
+  FontColor->RGBColor[1, 0, 1]],
+ StyleBox["\nImplemented text and subsections; now also used code cells \
+format to make clearer, and have broken up code cells for better readability- \
+this is from week 1 and 3 feedback, had no feedback on week 2. From week 5 I \
+have ensured to label all graphs\n\n\n",
+  FontSize->24]
+}], "Title",
+ CellFrame->{{0, 0}, {0, 3}},
+ CellChangeTimes->{
+  3.724350863230672*^9, {3.7554377965759945`*^9, 3.7554377970610547`*^9}, {
+   3.755437883966379*^9, 3.7554378986990423`*^9}, {3.755438238681673*^9, 
+   3.755438269628213*^9}, {3.7556100400708838`*^9, 3.7556100406176205`*^9}, 
+   3.7556102593969035`*^9, {3.755610309382546*^9, 3.7556103428416023`*^9}, 
+   3.755610458790455*^9, {3.75561050591443*^9, 3.7556105642945957`*^9}, {
+   3.755610660170329*^9, 3.7556106612502966`*^9}, {3.755610889451978*^9, 
+   3.7556108959445453`*^9}, {3.7556113066600285`*^9, 3.755611375699606*^9}, {
+   3.7558957825659647`*^9, 3.75589579503927*^9}, {3.7565057292846513`*^9, 
+   3.756505732762686*^9}, 3.759563825376754*^9, {3.7920651191956215`*^9, 
+   3.7920651448990545`*^9}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"0adfd272-3a02-4cec-9d1d-c11740ad9fb8"],
+
+Cell[TextData[StyleBox["Give your answers in the code cells labelled \
+\[OpenCurlyDoubleQuote](*your solution here*)\[CloseCurlyDoubleQuote]",
+ FontSize->24,
+ FontColor->RGBColor[0.5, 0, 0.5]]], "Title",
+ CellFrame->{{0, 0}, {0, 3}},
+ CellChangeTimes->{
+  3.724350863230672*^9, {3.7554377965759945`*^9, 3.7554377970610547`*^9}, {
+   3.755437883966379*^9, 3.7554378986990423`*^9}, {3.755438238681673*^9, 
+   3.755438269628213*^9}, {3.7556100400708838`*^9, 3.7556100406176205`*^9}, 
+   3.7556102593969035`*^9},
+ ImageRegion->{{0, 1}, {0, 1}},
+ FontColor->RGBColor[
+  1, 0, 0],ExpressionUUID->"c985b499-3745-478a-9085-52373b7e48d6"],
+
+Cell["Question 1 :", "Section",
+ CellChangeTimes->{{3.791723418871279*^9, 
+  3.791723425071745*^9}},ExpressionUUID->"d2ca4b94-06c1-4543-b9c0-\
+af56697bb6bf"],
+
+Cell[TextData[{
+ StyleBox["1. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Explain ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["in a text cell ",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["in your own words the differences between the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Solve",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[", ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["NSolve",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" and ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["FindRoot",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" functions. You may use the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" documentation to assist you in answering this question. Discuss \
+one or more specific examples to illustrate these differences. Make sure you \
+use Solve, NSolve and FindRoot each at least once within this question.   ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[15 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.444032293245*^9, 3.4440323207530003`*^9}, {
+   3.4440323807200003`*^9, 3.444032381887*^9}, {3.4754767752623634`*^9, 
+   3.475476779562363*^9}, {3.475476858112363*^9, 3.4754768583333635`*^9}, {
+   3.5387994175052137`*^9, 3.538799417696224*^9}, {3.5387994603656645`*^9, 
+   3.5387994609236965`*^9}, {3.5387995406392565`*^9, 3.5387995490937395`*^9}, 
+   3.538800681610516*^9, {3.567832156017972*^9, 3.567832171734827*^9}, {
+   3.662993000593604*^9, 3.662993071402258*^9}, {3.662993118723468*^9, 
+   3.662993204073954*^9}, {3.6646483711081047`*^9, 3.66464837125168*^9}, {
+   3.6646485687606564`*^9, 3.6646485862638702`*^9}, {3.664648627334518*^9, 
+   3.664648652837721*^9}, {3.664649090353794*^9, 3.664649099705447*^9}, {
+   3.6646491901350117`*^9, 3.664649190278451*^9}, {3.6646492650699043`*^9, 
+   3.664649275346747*^9}, {3.6966280727034245`*^9, 3.6966280734353647`*^9}, {
+   3.759561042037891*^9, 
+   3.75956104526826*^9}},ExpressionUUID->"cd45d255-22e5-429a-b738-\
+82e7c594e392"],
+
+Cell["Solve :", "Subsubsection",
+ CellChangeTimes->{{3.75543802899012*^9, 3.7554380740371265`*^9}, {
+  3.755610037258995*^9, 3.7556100378370075`*^9}, {3.7917235233688126`*^9, 
+  3.7917235936745515`*^9}},ExpressionUUID->"6cbd6d2b-afb4-42c6-9d9c-\
+38892290c52d"],
+
+Cell["\<\
+ Solve  is a function which is designed  to solve linear and most polynomial \
+equations, it give for a substitution rule  or a list of substitution rules \
+to solutions to all linear equations/ inequalities and can solve a large \
+fraction of Diophantine equations ie. polynomials. \
+\>", "Text",
+ CellChangeTimes->{{3.791723603801818*^9, 3.7917236046532707`*^9}, {
+   3.7917311886706476`*^9, 3.791731191667267*^9}, 3.7920644647552614`*^9, {
+   3.7920663943876867`*^9, 3.7920664168416758`*^9}, {3.7920678694223747`*^9, 
+   3.7920678723782206`*^9}, {3.7920682481258326`*^9, 
+   3.7920682483024464`*^9}, {3.7920696089322724`*^9, 3.792069613094558*^9}, {
+   3.7920735529749117`*^9, 3.792073554379156*^9}, {3.7921357137316284`*^9, 
+   3.7921358343629384`*^9}, {3.792135889698186*^9, 3.792135920916153*^9}, {
+   3.7921360064791665`*^9, 3.792136011658986*^9}, {3.792137763168709*^9, 
+   3.792137842054802*^9}, {3.7921378911082993`*^9, 3.792137967947915*^9}, {
+   3.792138045690542*^9, 3.792138080843698*^9}, {3.792138114427002*^9, 
+   3.7921382501075115`*^9}, {3.7921383323571243`*^9, 3.792138363115614*^9}, {
+   3.7921427656148443`*^9, 
+   3.7921427750734673`*^9}},ExpressionUUID->"be9e8cb2-cd69-4208-adf2-\
+1175a3d68623"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", " ", 
+      RowBox[{"x", "^", "2"}]}], " ", "+", " ", 
+     RowBox[{"b", " ", "x"}], " ", "+", " ", "c"}], " ", "==", " ", "0"}], 
+   ",", " ", "x"}], "]"}]], "Code",
+ CellLabel->"In[38]:=",ExpressionUUID->"9aad4f7e-7592-4542-ab18-75b3966943ee"],
+
+Cell["\<\
+Unlike NSolve, Solve gives analytic solutions, this means for some  equations \
+the answer from Solve must be passed with //N, so it is numerically evaluated\
+\
+\>", "Text",
+ CellChangeTimes->{{3.7921423644789534`*^9, 3.792142379901904*^9}, {
+  3.792142678262072*^9, 3.792142679332031*^9}, {3.7921427349277964`*^9, 
+  3.7921427624612694`*^9}, {3.7921428053710747`*^9, 3.7921428306517544`*^9}, {
+  3.7921428617542477`*^9, 3.792142867019742*^9}, {3.7921429533750715`*^9, 
+  3.792142969604207*^9}, {3.792143031858061*^9, 
+  3.792143033463175*^9}},ExpressionUUID->"2b2080db-f762-4cd3-823a-\
+53dbcf824f3e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"sol", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "^", "5"}], " ", "+", " ", 
+      RowBox[{"x", "^", "4"}], " ", "+", " ", 
+      RowBox[{"x", "^", "3"}], " ", "+", " ", 
+      RowBox[{"x", "^", "2"}], " ", "+", " ", "x", " ", "+", " ", "1"}], " ", 
+     "==", " ", "0"}], ",", " ", "x"}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"x", "/.", "sol"}], "//", "N"}]}], "Code",
+ CellChangeTimes->{{3.792067543018532*^9, 3.792067545926613*^9}, {
+  3.7920678874003983`*^9, 3.792067890066062*^9}, {3.7920679561467686`*^9, 
+  3.7920679689328265`*^9}, {3.7920733843124294`*^9, 3.792073408092645*^9}, {
+  3.7921369140546064`*^9, 3.792136976217278*^9}, {3.7921382688513174`*^9, 
+  3.792138306949664*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"a07b0e46-2b04-427d-b487-05d81a28ae2c"],
+
+Cell["Solve only works on linear and polynomial equation", "Text",
+ CellChangeTimes->{{3.792138410567477*^9, 3.7921384262876506`*^9}, {
+  3.792142304392392*^9, 
+  3.7921423228013415`*^9}},ExpressionUUID->"ceae35ba-83f7-4971-9395-\
+dd5353873861"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", " ", 
+      RowBox[{"Cos", "[", "r", "]"}]}], " ", "==", " ", "r"}], ",", " ", 
+    "r"}], "]"}], " "}]], "Code",
+ CellChangeTimes->{{3.792067543018532*^9, 3.792067545926613*^9}, {
+  3.7920678874003983`*^9, 3.792067890066062*^9}, {3.7920679561467686`*^9, 
+  3.7920679689328265`*^9}, {3.7920733843124294`*^9, 3.7920733875308237`*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"4c201edd-8a4b-49e5-b6aa-e7363fd12f56"]
+}, Open  ]],
+
+Cell["\<\
+In addition, there is no analytical solution for the roots of a general \
+polynomial equation of degree higher than four, so solve cant be used for a \
+general solution to these.\
+\>", "Text",
+ CellChangeTimes->{
+  3.79213837008075*^9},ExpressionUUID->"090df28a-f773-4fbd-bda9-d8728e92b157"],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", " ", 
+      RowBox[{"x", "^", "5"}]}], " ", "+", " ", 
+     RowBox[{"b", " ", 
+      RowBox[{"x", "^", "4"}]}], " ", "+", " ", 
+     RowBox[{"c", " ", 
+      RowBox[{"x", "^", "3"}]}], " ", "+", " ", 
+     RowBox[{"d", " ", 
+      RowBox[{"x", "^", "2"}]}], " ", "+", " ", 
+     RowBox[{"e", " ", "x"}], " ", "+", " ", "f"}], " ", "==", " ", "0"}], 
+   ",", " ", "x"}], "]"}]], "Code",
+ CellLabel->"In[42]:=",ExpressionUUID->"36c18e0a-b03d-4672-a974-9cc70728c15d"],
+
+Cell["NSolve :", "Subsubsection",
+ CellChangeTimes->{{3.75543802899012*^9, 3.7554380740371265`*^9}, {
+  3.755610037258995*^9, 3.7556100378370075`*^9}, {3.7917235233688126`*^9, 
+  3.7917235954279118`*^9}},ExpressionUUID->"a193d4c0-69a3-4677-9be9-\
+ccd740660b2b"],
+
+Cell["\<\
+NSolve like Solve works to solve linear and polynomial equations, the \
+algebraic methods available in Solve sometimes can not be passed on some  \
+advanced functions and are  required  to be numerically evaluated. NSolve can \
+work on variables like a,b or c:\
+\>", "Text",
+ CellChangeTimes->{{3.7917236125410595`*^9, 3.791723612989282*^9}, {
+   3.7917311825819626`*^9, 3.791731185374818*^9}, 3.7920644665892253`*^9, {
+   3.7920672794217834`*^9, 3.7920672817605104`*^9}, {3.792067792184311*^9, 
+   3.7920677934424944`*^9}, {3.7920678444882135`*^9, 3.792067851330739*^9}, {
+   3.7921430524964943`*^9, 3.7921431329138656`*^9}, {3.7921431996406775`*^9, 
+   3.7921432246160016`*^9}, {3.792143348032194*^9, 3.7921433909547763`*^9}, {
+   3.792146083622813*^9, 3.792146098618808*^9}, 3.792146254304356*^9, {
+   3.792146373565784*^9, 
+   3.7921464842175713`*^9}},ExpressionUUID->"b0da57c0-fe79-4428-961d-\
+6b2a332684f3"],
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", " ", 
+      RowBox[{"x", "^", "2"}]}], " ", "+", " ", 
+     RowBox[{"b", " ", "x"}], " ", "+", "c"}], " ", "==", " ", "0"}], ",", 
+   " ", "x"}], "]"}]], "Code",
+ CellChangeTimes->{{3.7921370360908766`*^9, 3.792137039179208*^9}, {
+  3.792138099002754*^9, 3.7921381068334093`*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"8cbd619c-64fd-4341-af59-d1d0e51e69b4"],
+
+Cell["\<\
+Here unlike Solve it gives the numerically evaluated solution by default :\
+\>", "Text",
+ CellChangeTimes->{{3.792146496034443*^9, 
+  3.7921465374968348`*^9}},ExpressionUUID->"7ef4bab4-f33b-4cf2-b452-\
+6bd48c599008"],
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "^", "5"}], " ", "+", " ", 
+      RowBox[{"x", "^", "4"}], " ", "+", " ", 
+      RowBox[{"x", "^", "3"}], " ", "+", " ", 
+      RowBox[{"x", "^", "2"}], " ", "+", " ", "x", " ", "+", " ", "1"}], " ", 
+     "==", " ", "0"}], "}"}], ",", " ", "x"}], "]"}]], "Code",
+ CellChangeTimes->{
+  3.792067325839121*^9, {3.792067892761653*^9, 3.7920678968518467`*^9}, {
+   3.7920679849234686`*^9, 3.7920679876233373`*^9}, {3.792068069433745*^9, 
+   3.7920680732162957`*^9}, {3.792070230389043*^9, 3.7920702581163216`*^9}, {
+   3.792073364160438*^9, 3.7920733687843485`*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"8f0fddfc-063f-4395-9907-d32854a27e56"],
+
+Cell["\<\
+And like Solve, it only works on linear and polynomial functions :\
+\>", "Text",
+ CellChangeTimes->{{3.792146543980938*^9, 
+  3.792146599657395*^9}},ExpressionUUID->"4e11ffff-29c4-4d24-a9e3-\
+aced4477d394"],
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"4", " ", 
+     RowBox[{"Cos", "[", "r", "]"}]}], " ", "==", " ", "r"}], ",", " ", "r"}],
+   "]"}]], "Code",
+ CellChangeTimes->{
+  3.792067325839121*^9, {3.792067892761653*^9, 3.7920678968518467`*^9}, {
+   3.7920679849234686`*^9, 3.7920679876233373`*^9}, {3.792068069433745*^9, 
+   3.7920680732162957`*^9}, {3.792070230389043*^9, 3.7920702581163216`*^9}, {
+   3.792073364160438*^9, 3.7920733687843485`*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"b2fa89f7-2419-4553-91bf-732d8a529c14"],
+
+Cell["FindRoot :", "Subsubsection",
+ CellChangeTimes->{{3.75543802899012*^9, 3.7554380740371265`*^9}, {
+  3.755610037258995*^9, 3.7556100378370075`*^9}, {3.7917235233688126`*^9, 
+  3.7917235963521833`*^9}, {3.792066475235439*^9, 
+  3.792066476633561*^9}},ExpressionUUID->"ea446029-18bc-4d7c-996b-\
+ba0c79280a66"],
+
+Cell["\<\
+Using an initial value, FindRoot try\[CloseCurlyQuote]s find a numerical root \
+about that value; it starts with the initial value for the independent \
+variable and locate a solution by finding the value of x for which \
+infinitesimal changes creates a change in sign of y.  Unlike Solve or NSolve \
+this can provide a numerical root of a function or a numerical solution to \
+any arbitrary equation. This is show as Solve and NSolve can be used to find \
+the root of 4cos(r) = r. In trying to find a solution to your equation,
+
+ FindRoot starts at the point you specify, and then progressively tries to \
+get closer and closer to a solution, until it reaches it even if your \
+equations have several solutions, FindRoot always returns the first solution \
+it finds. Which solution this is will depend on what starting point you \
+chose. If you start sufficiently close to a particular solution, FindRoot \
+will usually return that solution. And like Solve and NSolve , FindRoot can \
+be given a list of equations and a list of variables for which to solve.\
+\>", "Text",
+ CellChangeTimes->{{3.7917236186419106`*^9, 3.7917236190084815`*^9}, {
+   3.791731197338966*^9, 3.7917312071560965`*^9}, 3.7920644691669693`*^9, {
+   3.7920664794399*^9, 3.7920665590649*^9}, {3.79206658964188*^9, 
+   3.792066626472378*^9}, {3.7920667466770077`*^9, 3.7920667778888063`*^9}, {
+   3.792066866539724*^9, 3.7920668805940876`*^9}, {3.7920669160464454`*^9, 
+   3.792066917871362*^9}, {3.7920701563018084`*^9, 3.7920701578267283`*^9}, 
+   3.7920702042254095`*^9, {3.7920750163567286`*^9, 3.7920750174360447`*^9}, {
+   3.7921360587137957`*^9, 3.792136072731187*^9}, {3.792136220591569*^9, 
+   3.792136224240999*^9}, {3.7921362579787836`*^9, 3.792136419031272*^9}, {
+   3.7921366403569765`*^9, 3.792136778946207*^9}, {3.7921466234522758`*^9, 
+   3.7921467053764353`*^9}},ExpressionUUID->"f13eb3ff-dbf4-4cc4-9907-\
+ecf88ac20fcf"],
+
+Cell["\<\
+Unlike Solve, FindRoot requires actual values and not just variables to give \
+a result :\
+\>", "Text",
+ CellChangeTimes->{{3.7921467184036865`*^9, 
+  3.7921467668141994`*^9}},ExpressionUUID->"515bd6ef-2afe-468b-9025-\
+556dbbbb6684"],
+
+Cell[BoxData[{
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", " ", 
+      RowBox[{"x", "^", "2"}]}], " ", "+", " ", 
+     RowBox[{"b", " ", "x"}]}], "  ", "==", " ", "0"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", " ", 
+      RowBox[{"x", "^", "2"}]}], " ", "+", " ", 
+     RowBox[{"b", " ", "x"}]}], "  ", "==", " ", "0"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "2"}], "}"}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.7921372311971226`*^9, 3.792137341441674*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"99adf555-f9b1-4247-b4cb-8d1894ef48b2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"4", " ", 
+       RowBox[{"Cos", "[", "r", "]"}]}], ",", " ", "r"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", 
+      RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{"FindRoot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", " ", 
+      RowBox[{"Cos", "[", "r", "]"}]}], " ", "==", " ", "r"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "1"}], "}"}]}], "]"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{"FindRoot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", " ", 
+      RowBox[{"Cos", "[", "r", "]"}]}], " ", "==", " ", "r"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", 
+      RowBox[{"-", "1"}]}], "}"}]}], "]"}], " "}], "\n", 
+ RowBox[{
+  RowBox[{"FindRoot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", " ", 
+      RowBox[{"Cos", "[", "r", "]"}]}], " ", "==", " ", "r"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", 
+      RowBox[{"-", "4"}]}], "}"}]}], "]"}], " "}]}], "Code",
+ CellChangeTimes->{{3.792067357813346*^9, 3.79206752123472*^9}, {
+  3.792067911556295*^9, 3.792067930828762*^9}, {3.792137182080104*^9, 
+  3.792137212565366*^9}},
+ CellLabel->"In[48]:=",ExpressionUUID->"9cea6170-6eb7-4651-a46a-d58e1c48ad50"],
+
+Cell["Question 2 :", "Section",
+ CellChangeTimes->{{3.791723428652645*^9, 
+  3.7917234336533885`*^9}},ExpressionUUID->"573709c7-67f0-410f-ba96-\
+e2a41454130c"],
+
+Cell[TextData[{
+ StyleBox["2. ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Use ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["FindRoot",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" to find where the curve y = tan(x) intersects the curve ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"y", "=", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", "x"}]}],
+    FontColor->RGBColor[0, 0, 1]], TraditionalForm]],ExpressionUUID->
+  "8e25144b-6d74-4248-a05f-cc8cf34e06d9"],
+ StyleBox[" in the range -2\[Pi] < x < 2\[Pi]. What equation(s) do these \
+intersection points represent the solution for? Explicitly give the number of \
+unique solutions and their values.  ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[9 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.444032293245*^9, 3.4440323207530003`*^9}, {
+   3.4440323807200003`*^9, 3.444032381887*^9}, {3.4754767752623634`*^9, 
+   3.475476779562363*^9}, {3.475476858112363*^9, 3.4754768583333635`*^9}, {
+   3.5387994175052137`*^9, 3.538799417696224*^9}, {3.5387994603656645`*^9, 
+   3.5387994609236965`*^9}, {3.5387995406392565`*^9, 3.5387995490937395`*^9}, 
+   3.538800681610516*^9, {3.567832156017972*^9, 3.567832171734827*^9}, 
+   3.6629932022094393`*^9, {3.662995310719368*^9, 3.662995310972556*^9}, {
+   3.6646483577563667`*^9, 3.6646484387375174`*^9}, 3.664648503658842*^9, {
+   3.7595626015023108`*^9, 
+   3.7595626207857695`*^9}},ExpressionUUID->"44549fa7-70d6-4520-8620-\
+1cbf51daaca2"],
+
+Cell["Visualising Equations:", "Subsubsection",
+ CellChangeTimes->{{3.7917239935787015`*^9, 
+  3.7917240053441334`*^9}},ExpressionUUID->"25d6fab7-7d75-4bd1-977e-\
+ee8c6db064c9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"exp2a", "=", " ", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", "x"}], " ", "\[Equal]", " ", 
+   RowBox[{"Tan", "[", "x", "]"}]}]}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", "x"}], ",", 
+     RowBox[{"Tan", "[", "x", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{
+      RowBox[{"-", "2"}], "\[Pi]"}], ",", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<x\>\"", ",", "\"\<y(x)\>\""}], "}"}]}], ",", " ", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", 
+    "\"\<Graph of y(x)=tan(x) and y(x)= \!\(\*SuperscriptBox[\(x\), \
+\(2\)]\)+x\>\""}], ",", " ", 
+   RowBox[{"PlotLegends", "\[Rule]", "\"\<Expressions\>\""}]}], "]"}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{"exp2a", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{
+      RowBox[{"-", "2"}], "\[Pi]"}], ",", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<x\>\"", ",", "\"\<y(x)\>\""}], "}"}]}], ",", " ", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", 
+    "\"\<Graph of y(x)= tan(x)- \!\(\*SuperscriptBox[\(x\), \
+\(2\)]\)+x\>\""}]}], "]"}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", "x"}], ",", 
+     RowBox[{"Tan", "[", "x", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", " ", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<x\>\"", ",", "\"\<y(x)\>\""}], "}"}]}], ",", " ", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", 
+    "\"\<Graph of y(x)=tan(x) and y(x)= \!\(\*SuperscriptBox[\(x\), \
+\(2\)]\)+x, over smaller domain about 0\>\""}], ",", 
+   RowBox[{"PlotLegends", "\[Rule]", "\"\<Expressions\>\""}]}], 
+  "]"}]}], "Code",
+ CellChangeTimes->{{3.75543802899012*^9, 3.7554380740371265`*^9}, {
+  3.755610037258995*^9, 3.7556100378370075`*^9}, {3.7917236231401296`*^9, 
+  3.7917237782561455`*^9}, {3.7917238095245075`*^9, 3.7917238528888116`*^9}, {
+  3.791731397813935*^9, 3.7917315571310906`*^9}, {3.7917317047500935`*^9, 
+  3.7917317409051094`*^9}, {3.7920651933274107`*^9, 3.7920652552759223`*^9}, {
+  3.792065299937196*^9, 3.792065511286021*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"c2eeecab-c5e1-482c-9fca-fca800461850"],
+
+Cell["Finding Roots :", "Subsubsection",
+ CellChangeTimes->{{3.7917239715751133`*^9, 
+  3.7917239863723245`*^9}},ExpressionUUID->"4610b150-b3fb-40d4-b3e8-\
+ee01b2656e4e"],
+
+Cell[BoxData[{
+ RowBox[{"FindRoot", "[", 
+  RowBox[{"exp2a", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "4.5"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"FindRoot", "[", 
+  RowBox[{"exp2a", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "1"}], "}"}]}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{"FindRoot", "[", 
+   RowBox[{"exp2a", ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0"}], "}"}]}], "]"}], " "}], "\n", 
+ RowBox[{"FindRoot", "[", 
+  RowBox[{"exp2a", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "2"}]}], "}"}]}], "]"}], "\n", 
+ RowBox[{"FindRoot", "[", 
+  RowBox[{"exp2a", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "4.8"}]}], "}"}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.75543802899012*^9, 3.7554380740371265`*^9}, {
+  3.755610037258995*^9, 3.7556100378370075`*^9}, {3.7917236231401296`*^9, 
+  3.7917237934767523`*^9}, {3.791723887327905*^9, 3.791723933345924*^9}, {
+  3.791731263387624*^9, 3.791731294113764*^9}, {3.791731361525597*^9, 
+  3.79173136957487*^9}, {3.791731461067276*^9, 3.7917314624444504`*^9}, {
+  3.7917315729679217`*^9, 3.7917316392299557`*^9}, {3.791731842561985*^9, 
+  3.7917318897445354`*^9}, {3.791731936738981*^9, 3.7917320456958847`*^9}, {
+  3.7917320773167443`*^9, 3.791732100620849*^9}},
+ CellLabel->"In[56]:=",ExpressionUUID->"e66583ce-2863-459b-bfbb-417593a51968"]
+}, Open  ]],
+
+Cell["\<\
+Note: 5 roots above have been found, although an interesting note is we can \
+see using small positive and negative values around zero produces what seems \
+to be extra roots; however, we can see the roots are extreme small and this \
+are actually same as the zero root just the Find Root function has some \
+inaccuracy in the precision \
+\>", "Text",
+ CellChangeTimes->{{3.7917321128764124`*^9, 3.791732115198681*^9}, 
+   3.791732412331581*^9, 3.791732929897832*^9, {3.791732968459379*^9, 
+   3.791732972699684*^9}, {3.7920644911420326`*^9, 3.7920646780702767`*^9}, {
+   3.792064722400326*^9, 
+   3.792064746870558*^9}},ExpressionUUID->"1d37b8a5-3245-46fd-8bc1-\
+9b404241521f"],
+
+Cell[BoxData[{
+ RowBox[{"FindRoot", "[", 
+  RowBox[{"exp2a", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0.2"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"FindRoot", "[", 
+  RowBox[{"exp2a", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "0.4"}]}], "}"}]}], "]"}]}], "Code",
+ CellChangeTimes->{3.791731952097447*^9},
+ CellLabel->"In[61]:=",ExpressionUUID->"099524a2-9cfb-403a-9b5b-ffa1eb3fdde7"],
+
+Cell["Question 3 :", "Section",
+ CellChangeTimes->{{3.7917234413691034`*^9, 
+  3.791723452889741*^9}},ExpressionUUID->"4dd92f09-b4fe-4aed-9f86-\
+1d17347b1766"],
+
+Cell[TextData[{
+ StyleBox["3.",
+  FontColor->RGBColor[1, 0, 0]],
+ "  ",
+ StyleBox["(a)",
+  FontColor->RGBColor[0, 0, 1]],
+ "  ",
+ StyleBox["Solve the differential equation\n        ",
+  FontColor->RGBColor[0, 0, 1]],
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     FractionBox["dy", "dt"], " ", "=", " ", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["t", "2"], 
+       SuperscriptBox["y", "2"]}], 
+      RowBox[{"1", "+", 
+       RowBox[{"8", 
+        SuperscriptBox["t", "4"]}]}]]}],
+    FontSize->16], TraditionalForm]],
+  FontColor->RGBColor[0, 0, 1],ExpressionUUID->
+  "01e80c06-5ccb-47ab-b939-769fc25dfa89"],
+ StyleBox["\n        with the boundary condition ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["y",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["(0) = 1/2",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQ7WPuO4Vh5UvHy77zZoDodzWnd4PooB1J50H0hEOZ
+zIxAmoFhAyeIlrm3UOHzk5eO046vAdOb5q6eevHpS8dnFzaB6TOua6/ujH3l
+OOk80w0QvWLz8ScgeolwxwsQvcm88fGz+FeO+Re7wHTaPD8+o8RXjrub5YRA
+9IkiFx/tqa8czxxP9QPRh4yadxzyfe3Y1nhrJ4je1Sd9GER/sDkLoduMb4Lo
+AslZ90H0u60hn0D03fNHvoDoxz2Bf0G0Ua8G42EgbXGGqUHc77Wjj9GxLhCd
+Uybntu/Ya0cblTIwreS8ywtEH+5S8wbRDsvvZYPocLdnYJp1e5HkGaY3jvcu
+VkqB6KAbK2xAtEAukwOIBgCkkrU9
+  
+  "],ExpressionUUID->"6b6a96da-a72f-4bac-9499-4732fec149bb"],
+
+Cell["i) Analytically:", "Subsubsection",
+ CellChangeTimes->{{3.791724251414255*^9, 3.791724263080928*^9}, 
+   3.7917243776750293`*^9},ExpressionUUID->"4f538592-ee63-45c8-8d09-\
+f0c887f3e2bb"],
+
+Cell[TextData[{
+ StyleBox[" (i) analytically (you may safely ignore any warning messages \
+produced here), ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[3 marks]",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["     ",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellChangeTimes->{{3.444049058413*^9, 3.444049092947*^9}, {3.444049374359*^9,
+   3.444049531085*^9}, {3.4440499473050003`*^9, 3.4440499975*^9}, {
+  3.475478789058363*^9, 3.4754787893993635`*^9}, {3.475934381363*^9, 
+  3.4759343815880003`*^9}, {3.53880030141477*^9, 3.538800320087838*^9}, {
+  3.5388004222406807`*^9, 3.5388004522523975`*^9}, {3.5399411480380487`*^9, 
+  3.5399411483380656`*^9}, {3.5406193784568357`*^9, 3.5406194089535804`*^9}, {
+  3.5678685141390114`*^9, 3.5678685311806393`*^9}, {3.664647620099946*^9, 
+  3.664647630828311*^9}, {3.6646477048611727`*^9, 3.6646477104136887`*^9}, {
+  3.664647881610222*^9, 3.664647932815605*^9}, {3.664648082647208*^9, 
+  3.664648102150374*^9}, {3.664648170548448*^9, 3.6646482012672358`*^9}, {
+  3.664821248087429*^9, 
+  3.664821352056991*^9}},ExpressionUUID->"b407e8dc-7224-4869-8674-\
+23fa6b5e727a"],
+
+Cell[BoxData[{
+ RowBox[{"exp3a", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"y", "'"}], "[", "t", "]"}], "\[Equal]", 
+   FractionBox[
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["t", "2"], " ", 
+      SuperscriptBox[
+       RowBox[{"y", "[", "t", "]"}], "2"]}], ")"}], 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"8", 
+       SuperscriptBox["t", "4"]}]}], ")"}]]}]}], "\n", 
+ RowBox[{"sol3a", "=", " ", 
+  RowBox[{"DSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"exp3a", ",", " ", 
+      RowBox[{
+       RowBox[{"y", "[", "0", "]"}], "\[Equal]", 
+       FractionBox["1", "2"]}]}], "}"}], ",", 
+    RowBox[{"y", "[", "t", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "1.3"}], "}"}]}], "]"}]}]}], "Code",
+ CellChangeTimes->{{3.79173407431649*^9, 3.7917340795713053`*^9}, {
+  3.7917355209195766`*^9, 3.791735536858737*^9}, {3.7921515657059937`*^9, 
+  3.7921515760818415`*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"6de24bd4-e017-44f0-8565-631c6eea2762"],
+
+Cell["\<\
+Here we get a specific  solution in which y for any value of t came be found\
+\>", "Text",
+ CellChangeTimes->{{3.7917242991985407`*^9, 3.791724321850156*^9}, {
+  3.7920647533236713`*^9, 
+  3.792064807595918*^9}},ExpressionUUID->"e596b1fc-76fb-446a-9b1e-\
+661d92d134d4"],
+
+Cell["ii) Numerically:", "Subsubsection",
+ CellChangeTimes->{{3.7917242746697807`*^9, 3.7917242869027176`*^9}, 
+   3.791724379831856*^9},ExpressionUUID->"538cc635-46d2-4a2e-ab2d-\
+a9bbca6a77b8"],
+
+Cell[TextData[{
+ StyleBox["(ii) numerically over the range 0 \[LessEqual] ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["t ",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\[LessEqual] 1.3, using the appropriate built-in ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" functions. ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["[2 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQ7WPuO4Vh5UvHy77zZoDodzWnd4PooB1J50H0hEOZ
+zIxAmoFhAyeIlrm3UOHzk5eO046vAdOb5q6eevHpS8dnFzaB6TOua6/ujH3l
+OOk80w0QvWLz8ScgeolwxwsQvcm88fGz+FeO+Re7wHTaPD8+o8RXjrub5YRA
+9IkiFx/tqa8czxxP9QPRh4yadxzyfe3Y1nhrJ4je1Sd9GER/sDkLoduMb4Lo
+AslZ90H0u60hn0D03fNHvoDoxz2Bf0G0Ua8G42EgbXGGqUHc77Xjm68BnSB6
+/qeTdmeY3jh+W6FmD6LLAx+7gemLz8G0BwNfL4ju27YVTC/Iei592/6No1/D
+LzANAMcJrug=
+  "],ExpressionUUID->"c3e8aadf-6515-4507-9a8b-a2a6b4d6626e"],
+
+Cell[BoxData[
+ RowBox[{"sol3b", "=", " ", 
+  RowBox[{"NDSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"exp3a", ",", " ", 
+      RowBox[{
+       RowBox[{"y", "[", "0", "]"}], "\[Equal]", 
+       FractionBox["1", "2"]}]}], "}"}], ",", 
+    RowBox[{"y", "[", "t", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "1.3"}], "}"}]}], "]"}]}]], "Code",
+ CellChangeTimes->{{3.75543802899012*^9, 3.7554380740371265`*^9}, {
+  3.755610037258995*^9, 3.7556100378370075`*^9}, {3.791724312254882*^9, 
+  3.7917243194486866`*^9}, {3.791733454334764*^9, 3.791733637021019*^9}, {
+  3.791733703461052*^9, 3.7917337309720926`*^9}, {3.7917337857396584`*^9, 
+  3.7917338976264124`*^9}, {3.791733943848089*^9, 3.7917339505105057`*^9}, {
+  3.7917355401871233`*^9, 3.7917355416873913`*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"91dabb8d-c265-473a-8cdb-b447116011ca"],
+
+Cell["\<\
+The numerical solution instead gives a only  gives estimated solution between \
+the 0-1.3 interval of t\
+\>", "Text",
+ CellChangeTimes->{{3.7917243167997336`*^9, 3.791724323894178*^9}, {
+  3.7920648168871794`*^9, 3.7920648602152247`*^9}, {3.7920649555673957`*^9, 
+  3.7920649571808605`*^9}},ExpressionUUID->"027e3d71-3cfa-4b7f-a574-\
+0f3b9d3e1537"],
+
+Cell["b) Plotting Graphs:", "Subsubsection",
+ CellChangeTimes->{{3.791724333462715*^9, 3.7917243494646435`*^9}, 
+   3.7917243821746435`*^9},ExpressionUUID->"51ace142-b4da-4349-8a61-\
+7c03998908b9"],
+
+Cell[TextData[{
+ StyleBox["(b) Plot graphs of each solution, and of the difference between \
+the two results, for  0 \[LessEqual] ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["t ",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["\[LessEqual] 1.3. What does the difference plot tell you? ",
+  FontColor->RGBColor[0, 0, 1]],
+ " ",
+ StyleBox["[5 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.444049058413*^9, 3.444049092947*^9}, {3.444049374359*^9,
+    3.444049531085*^9}, {3.4440499473050003`*^9, 3.4440499975*^9}, {
+   3.475478789058363*^9, 3.4754787893993635`*^9}, {3.475934381363*^9, 
+   3.4759343815880003`*^9}, {3.53880030141477*^9, 3.538800320087838*^9}, {
+   3.5388004222406807`*^9, 3.5388004522523975`*^9}, {3.5399411480380487`*^9, 
+   3.5399411483380656`*^9}, {3.5406193784568357`*^9, 
+   3.5406194089535804`*^9}, {3.5678685141390114`*^9, 
+   3.5678685311806393`*^9}, {3.664647620099946*^9, 3.664647630828311*^9}, {
+   3.6646477048611727`*^9, 3.6646477104136887`*^9}, {3.664647881610222*^9, 
+   3.664647932815605*^9}, {3.664648082647208*^9, 3.664648102150374*^9}, {
+   3.664648170548448*^9, 3.6646482012672358`*^9}, {3.664821248087429*^9, 
+   3.6648213237306013`*^9}, {3.6652155095149117`*^9, 
+   3.6652155099146338`*^9}, {3.665217834831781*^9, 3.665217836389162*^9}, 
+   3.75956328888645*^9, {3.759563323579728*^9, 3.7595633238260713`*^9}, {
+   3.7915752673946238`*^9, 
+   3.7915752675162945`*^9}},ExpressionUUID->"178541f4-b226-4935-a94d-\
+98e24d4b3090"],
+
+Cell[BoxData[{
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "/.", "sol3a"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1.3"}], "}"}], ",", " ", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<t\>\"", ",", "\"\<y(t)\>\""}], "}"}]}], ",", " ", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", 
+    "\"\<Graph for Analytical solution of differential equation\>\""}]}], 
+  "]"}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "/.", "sol3b"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1.3"}], "}"}], ",", " ", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<t\>\"", ",", "\"\<y(t)\>\""}], "}"}]}], ",", " ", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", 
+    "\"\<Graph for Numerical solution of differential equation\>\""}]}], 
+  "]"}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"y", "[", "t", "]"}], "/.", "sol3a"}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"y", "[", "t", "]"}], "/.", "sol3b"}], ")"}]}], "}"}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1.3"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", " ", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<t\>\"", ",", "\"\<y(t)\>\""}], "}"}]}], ",", " ", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", 
+    "\"\<Graph for Difference between Analytical solution and Numerical \
+Solution\>\""}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.75543802899012*^9, 3.7554380740371265`*^9}, {
+   3.755610037258995*^9, 3.7556100378370075`*^9}, 3.7917243888825808`*^9, {
+   3.7917339031129575`*^9, 3.791734037419219*^9}, {3.791734123431412*^9, 
+   3.7917341277662745`*^9}, {3.7917350528010216`*^9, 
+   3.7917350842115445`*^9}, {3.7917351991504126`*^9, 3.7917352286365843`*^9}, 
+   3.791735273419634*^9, {3.7917353178799987`*^9, 3.7917353955912514`*^9}, {
+   3.7917372189036627`*^9, 3.7917372196319714`*^9}, {3.7920648691585054`*^9, 
+   3.7920648956862717`*^9}, {3.792065556742999*^9, 3.79206567961781*^9}},
+ CellLabel->"In[66]:=",ExpressionUUID->"1e3fd569-2ddf-4f2f-99ff-fa4c4478abb6"],
+
+Cell[TextData[{
+ "Difference in solutions is very small as the difference plot range is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"less", " ", "than", " ", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "7"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "93961d9f-73e5-4b45-b27d-34a5ca0f8298"],
+ ", so both solutions mainly agree over this range, however, this varies over \
+t randomly. In addition, the plot is mostly positive showing the analytical \
+solution is usually bigger so the numerical solution is underestimating. \
+However, we see a transition from low values of t where the numerical \
+solution is over estimating to underestimating."
+}], "Text",
+ CellChangeTimes->{{3.7917243925001945`*^9, 3.7917243939843206`*^9}, {
+  3.7917372851673684`*^9, 3.7917373086549983`*^9}, {3.79173735880855*^9, 
+  3.7917375394945917`*^9}, {3.7917375984023705`*^9, 3.791737649074707*^9}, {
+  3.7917377940085144`*^9, 3.7917377987919827`*^9}, {3.7917378422273707`*^9, 
+  3.7917378877121925`*^9}},ExpressionUUID->"92afa9b9-86e9-474d-9bc2-\
+ef9e75681d1d"],
+
+Cell["c) Substituting:", "Subsubsection",
+ CellChangeTimes->{{3.791724352790286*^9, 3.7917243725638046`*^9}, {
+  3.7917244085437326`*^9, 
+  3.7917244094938617`*^9}},ExpressionUUID->"bb08fcc4-1ad9-4e69-b65e-\
+e6b851f4626d"],
+
+Cell[TextData[{
+ StyleBox["(c) Check your solutions by substituting into the original \
+differential equation. You will have to use a graphical approach to \
+demonstrate the equality in the differential equation for the numerical \
+solution. ",
+  FontColor->RGBColor[0, 0, 1]],
+ " ",
+ StyleBox["[10 marks]",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.444049058413*^9, 3.444049092947*^9}, {3.444049374359*^9,
+    3.444049531085*^9}, {3.4440499473050003`*^9, 3.4440499975*^9}, {
+   3.475478789058363*^9, 3.4754787893993635`*^9}, {3.475934381363*^9, 
+   3.4759343815880003`*^9}, {3.53880030141477*^9, 3.538800320087838*^9}, {
+   3.5388004222406807`*^9, 3.5388004522523975`*^9}, {3.5399411480380487`*^9, 
+   3.5399411483380656`*^9}, {3.5406193784568357`*^9, 
+   3.5406194089535804`*^9}, {3.5678685141390114`*^9, 
+   3.5678685311806393`*^9}, {3.664647620099946*^9, 3.664647630828311*^9}, {
+   3.6646477048611727`*^9, 3.6646477104136887`*^9}, {3.664647881610222*^9, 
+   3.664647932815605*^9}, {3.664648082647208*^9, 3.664648102150374*^9}, {
+   3.664648170548448*^9, 3.6646482012672358`*^9}, {3.664821248087429*^9, 
+   3.6648213237306013`*^9}, 3.664821384057065*^9, {3.664821835584738*^9, 
+   3.664821835779804*^9}, {3.664822171322112*^9, 3.664822181929523*^9}, {
+   3.665216542626597*^9, 3.6652165440983143`*^9}, {3.6652172939818*^9, 
+   3.665217304564879*^9}, {3.6652178586313267`*^9, 
+   3.6652178597415667`*^9}},ExpressionUUID->"5e23a860-9429-4cf2-95e0-\
+05e3d2019a75"],
+
+Cell[BoxData[{
+ RowBox[{"yt", "=", " ", 
+  RowBox[{
+   RowBox[{"y", "[", "t", "]"}], "/.", "sol3a"}]}], "\[IndentingNewLine]", 
+ RowBox[{"exp3b", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{"yt", ",", "t"}], "]"}], "\[Equal]", 
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["t", "2"], 
+       SuperscriptBox["yt", "2"]}], ")"}], 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"8", " ", 
+        SuperscriptBox["t", "4"]}]}], ")"}]]}], "//", "Simplify"}]}]}], "Code",\
+
+ CellChangeTimes->{{3.75543802899012*^9, 3.7554380740371265`*^9}, {
+   3.755610037258995*^9, 3.7556100378370075`*^9}, 3.791724399836955*^9, {
+   3.7917354675800743`*^9, 3.7917354864086556`*^9}, {3.791735558638256*^9, 
+   3.791735658173664*^9}, {3.791735733196086*^9, 3.791735752447542*^9}, {
+   3.791735786495062*^9, 3.7917357950866795`*^9}, {3.7917360548916197`*^9, 
+   3.7917360852696776`*^9}, {3.7917362448374124`*^9, 
+   3.7917363028019648`*^9}, {3.7917364267382994`*^9, 
+   3.7917364571571913`*^9}, {3.791736626970177*^9, 3.7917366461082487`*^9}, {
+   3.79173671269781*^9, 3.7917368190013523`*^9}, {3.791736939775356*^9, 
+   3.7917369494661274`*^9}, {3.791737096614563*^9, 3.791737135047411*^9}, 
+   3.791737197118348*^9},
+ CellLabel->"In[69]:=",ExpressionUUID->"512cdcbd-1a3b-4b28-974d-4f2ed0ca524d"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "t_", "]"}], "=", " ", 
+  RowBox[{
+   RowBox[{"y", "[", "t", "]"}], "/.", "sol3b"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"df", "[", "t_", "]"}], "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "t", "]"}], ",", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"exp3c", "=", " ", 
+  RowBox[{
+   RowBox[{"df", "[", "t", "]"}], "\[Equal]", 
+   FractionBox[
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["t", "2"], 
+      SuperscriptBox[
+       RowBox[{"f", "[", "t", "]"}], "2"]}], ")"}], 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"8", 
+       SuperscriptBox["t", "4"]}]}], ")"}]]}]}], "\n", 
+ RowBox[{"Plot", "[", 
+  RowBox[{"exp3c", ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "1.3"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}], ",", " ", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<t\>\"", ",", 
+      "\"\<\!\(\*FractionBox[\(\[DifferentialD]y\), \(\[DifferentialD]t\)]\)=\
+\!\(\*FractionBox[\(\*SuperscriptBox[\(t\), \(2\)]\\\ y \
+\*SuperscriptBox[\((t)\), \(2\)]\), \(1 + 8\\\ \*SuperscriptBox[\(t\), \(4\)]\
+\)]\)\>\""}], "}"}]}], ",", " ", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", " ", 
+    "\"\<Graph of differential equation with numerical solution values subbed \
+back in\>\""}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.791735676765381*^9, 3.791735690418607*^9}, {
+  3.7917357572018933`*^9, 3.7917358161591816`*^9}, {3.791735959850395*^9, 
+  3.791736042786128*^9}, {3.7917366535705132`*^9, 3.791736662259494*^9}, {
+  3.7917371624645915`*^9, 3.7917371934136424`*^9}, {3.7920657098130302`*^9, 
+  3.792065711079371*^9}, {3.7920657440361047`*^9, 3.79206580864283*^9}, {
+  3.792065850380254*^9, 3.792065864875634*^9}, {3.7920659179006133`*^9, 
+  3.7920659444091682`*^9}, {3.792065982732505*^9, 3.792065994933646*^9}},
+ CellLabel->"In[71]:=",ExpressionUUID->"fc711504-7334-4e71-898e-b222700f8280"],
+
+Cell["\<\
+The plot shows that the solution varies around zero, and is fairly accurate, \
+ideally the solution would give all zero\
+\>", "Text",
+ CellChangeTimes->{{3.791724404666232*^9, 3.7917244050095606`*^9}, {
+  3.791737909313541*^9, 3.791737909678149*^9}, {3.7917379448008127`*^9, 
+  3.791737972852188*^9}, {3.7917386328963747`*^9, 3.7917386361336174`*^9}, {
+  3.792066035438095*^9, 3.792066036334564*^9}, {3.7920660696143856`*^9, 
+  3.792066093666254*^9}},ExpressionUUID->"ebb6558e-99d2-46c6-8367-\
+ca413c743975"],
+
+Cell[TextData[StyleBox["Total marks available: 44",
+ FontWeight->"Bold",
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ CellChangeTimes->{{3.6300587816274242`*^9, 3.6300587943621197`*^9}, {
+  3.659779066850543*^9, 3.659779066935985*^9}, {3.6627100763205347`*^9, 
+  3.662710076560639*^9}, {3.662735850657501*^9, 3.662735851035707*^9}, {
+  3.662736097235936*^9, 3.662736097592898*^9}, {3.7553714838901777`*^9, 
+  3.7553714844370303`*^9}, {3.7565059085662775`*^9, 3.756505909493001*^9}, {
+  3.75710391416448*^9, 3.757103915023204*^9}, {3.7595639282158437`*^9, 
+  3.759563930046949*^9}},ExpressionUUID->"f72778ea-7924-4b6e-95df-\
+e619607df2e6"],
+
+Cell[TextData[{
+ StyleBox["Solutions are due by ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["4pm on Monday March 2nd",
+  FontWeight->"Bold",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[". Make a copy of your solutions with the output deleted (",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Cell|Delete All Output",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[") and upload it through Moodle.  Please name your file according \
+to the pattern ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["hw6_Bhamrah_Jasvir",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[". \n\nOf course, the first thing I shall do when I get the file is \
+to click ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Evaluation|Evaluate Notebook, ",
+  FontFamily->"Courier New",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["so make sure the file you send me will survive that.",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.503730245604706*^9, 3.503730325411271*^9}, {
+  3.5345941263694425`*^9, 3.5345941296526303`*^9}, {3.5345941661737194`*^9, 
+  3.534594292303933*^9}, {3.5661374978679514`*^9, 3.5661375008041196`*^9}, {
+  3.56613754556868*^9, 3.5661375460287066`*^9}, {3.6300584995347767`*^9, 
+  3.630058501598486*^9}, {3.7243516166077967`*^9, 3.724351639483448*^9}, {
+  3.7553714928068905`*^9, 3.755371493053547*^9}, {3.755373762346409*^9, 
+  3.755373762521445*^9}, {3.7565059140390844`*^9, 3.756505922836955*^9}, {
+  3.7571039620340004`*^9, 3.7571039662031546`*^9}, {3.7595639501322603`*^9, 
+  3.7595639544327936`*^9}, {3.7915752775524516`*^9, 
+  3.7915752795599566`*^9}},ExpressionUUID->"1620ff94-e668-44c4-9f1a-\
+1e5908826386"],
+
+Cell[TextData[StyleBox["A.H. Harker, J. Underwood, L.K. McKemmish, J. Bhamrah\
+\nUCL\nFebruary 2016, February 2017, February 2018, February 2020",
+ FontColor->RGBColor[0, 1, 0]]], "Text",
+ CellChangeTimes->{{3.44404878359*^9, 3.44404879452*^9}, {
+  3.4754749461593633`*^9, 3.4754749474385633`*^9}, {3.5387993986871367`*^9, 
+  3.5387993988721476`*^9}, {3.5661377286321507`*^9, 3.5661377289491687`*^9}, {
+  3.662991451659877*^9, 3.662991459937736*^9}, {3.6966280945581975`*^9, 
+  3.696628102248811*^9}, {3.7280770278230934`*^9, 3.7280770311415615`*^9}, {
+  3.7595634748589263`*^9, 3.759563477846937*^9}, {3.7915752824571705`*^9, 
+  3.7915752832121177`*^9}},ExpressionUUID->"32c3cf98-bf55-4120-905b-\
+ff58513bee9b"]
+},
+WindowToolbars->{},
+CellGrouping->Manual,
+WindowSize->{1500, 957},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{582.9599999999999, 829.0799999999999}},
+ShowCellLabel->True,
+ShowCellTags->False,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "ProgrammingLabDefault.nb", 
+  CharacterEncoding -> "UTF-8"],
+PrivateNotebookOptions -> {"ColorPalette" -> {RGBColor, -1}},
+RenderingOptions -> {"ObjectDithering" -> True},
+RenderingOptions -> {"RasterDithering" -> False}
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 487, 10, 73, "Subtitle",ExpressionUUID->"f5719df8-fa83-4fe8-afb1-defda8c17687"],
+Cell[1035, 32, 638, 12, 71, "Title",ExpressionUUID->"f2d3e093-4ec6-40c5-b185-3c59ba978920"],
+Cell[1676, 46, 996, 20, 109, "Title",ExpressionUUID->"b44cf058-ec71-428a-a9e4-31cdda19dfc3"],
+Cell[2675, 68, 800, 21, 179, "Title",ExpressionUUID->"05e1e3ba-7aa4-4a8b-ad50-ccf054f3b9ec"],
+Cell[3478, 91, 1987, 52, 292, "Title",ExpressionUUID->"0adfd272-3a02-4cec-9d1d-c11740ad9fb8"],
+Cell[5468, 145, 629, 12, 82, "Title",ExpressionUUID->"c985b499-3745-478a-9085-52373b7e48d6"],
+Cell[6100, 159, 157, 3, 67, "Section",ExpressionUUID->"d2ca4b94-06c1-4543-b9c0-af56697bb6bf"],
+Cell[6260, 164, 2139, 49, 54, "Text",ExpressionUUID->"cd45d255-22e5-429a-b738-82e7c594e392"],
+Cell[8402, 215, 260, 4, 44, "Subsubsection",ExpressionUUID->"6cbd6d2b-afb4-42c6-9d9c-38892290c52d"],
+Cell[8665, 221, 1228, 19, 54, "Text",ExpressionUUID->"be9e8cb2-cd69-4208-adf2-1175a3d68623"],
+Cell[9896, 242, 337, 9, 53, "Code",ExpressionUUID->"9aad4f7e-7592-4542-ab18-75b3966943ee"],
+Cell[10236, 253, 611, 11, 35, "Text",ExpressionUUID->"2b2080db-f762-4cd3-823a-53dbcf824f3e"],
+Cell[CellGroupData[{
+Cell[10872, 268, 838, 18, 76, "Code",ExpressionUUID->"a07b0e46-2b04-427d-b487-05d81a28ae2c"],
+Cell[11713, 288, 245, 4, 35, "Text",ExpressionUUID->"ceae35ba-83f7-4971-9395-dd5353873861"],
+Cell[11961, 294, 504, 11, 53, "Code",ExpressionUUID->"4c201edd-8a4b-49e5-b6aa-e7363fd12f56"]
+}, Open  ]],
+Cell[12480, 308, 301, 6, 35, "Text",ExpressionUUID->"090df28a-f773-4fbd-bda9-d8728e92b157"],
+Cell[12784, 316, 556, 15, 53, "Code",ExpressionUUID->"36c18e0a-b03d-4672-a974-9cc70728c15d"],
+Cell[13343, 333, 261, 4, 44, "Subsubsection",ExpressionUUID->"a193d4c0-69a3-4677-9be9-ccd740660b2b"],
+Cell[13607, 339, 923, 15, 54, "Text",ExpressionUUID->"b0da57c0-fe79-4428-961d-6b2a332684f3"],
+Cell[14533, 356, 452, 11, 53, "Code",ExpressionUUID->"8cbd619c-64fd-4341-af59-d1d0e51e69b4"],
+Cell[14988, 369, 226, 5, 35, "Text",ExpressionUUID->"7ef4bab4-f33b-4cf2-b452-6bd48c599008"],
+Cell[15217, 376, 754, 16, 53, "Code",ExpressionUUID->"8f0fddfc-063f-4395-9907-d32854a27e56"],
+Cell[15974, 394, 216, 5, 35, "Text",ExpressionUUID->"4e11ffff-29c4-4d24-a9e3-aced4477d394"],
+Cell[16193, 401, 560, 12, 53, "Code",ExpressionUUID->"b2fa89f7-2419-4553-91bf-732d8a529c14"],
+Cell[16756, 415, 312, 5, 44, "Subsubsection",ExpressionUUID->"ea446029-18bc-4d7c-996b-ba0c79280a66"],
+Cell[17071, 422, 1918, 28, 169, "Text",ExpressionUUID->"f13eb3ff-dbf4-4cc4-9907-ecf88ac20fcf"],
+Cell[18992, 452, 243, 6, 35, "Text",ExpressionUUID->"515bd6ef-2afe-468b-9025-556dbbbb6684"],
+Cell[19238, 460, 713, 20, 76, "Code",ExpressionUUID->"99adf555-f9b1-4247-b4cb-8d1894ef48b2"],
+Cell[19954, 482, 1296, 40, 120, "Code",ExpressionUUID->"9cea6170-6eb7-4651-a46a-d58e1c48ad50"],
+Cell[21253, 524, 159, 3, 67, "Section",ExpressionUUID->"573709c7-67f0-410f-ba96-e2a41454130c"],
+Cell[21415, 529, 1540, 35, 54, "Text",ExpressionUUID->"44549fa7-70d6-4520-8620-1cbf51daaca2"],
+Cell[22958, 566, 177, 3, 44, "Subsubsection",ExpressionUUID->"25d6fab7-7d75-4bd1-977e-ee8c6db064c9"],
+Cell[CellGroupData[{
+Cell[23160, 573, 2447, 65, 130, "Code",ExpressionUUID->"c2eeecab-c5e1-482c-9fca-fca800461850"],
+Cell[25610, 640, 170, 3, 44, "Subsubsection",ExpressionUUID->"4610b150-b3fb-40d4-b3e8-ee01b2656e4e"],
+Cell[25783, 645, 1373, 32, 136, "Code",ExpressionUUID->"e66583ce-2863-459b-bfbb-417593a51968"]
+}, Open  ]],
+Cell[27171, 680, 688, 12, 58, "Text",ExpressionUUID->"1d37b8a5-3245-46fd-8bc1-9b404241521f"],
+Cell[27862, 694, 405, 11, 76, "Code",ExpressionUUID->"099524a2-9cfb-403a-9b5b-ffa1eb3fdde7"],
+Cell[28270, 707, 159, 3, 67, "Section",ExpressionUUID->"4dd92f09-b4fe-4aed-9f86-1d17347b1766"],
+Cell[28432, 712, 1352, 41, 85, "Text",ExpressionUUID->"6b6a96da-a72f-4bac-9499-4732fec149bb"],
+Cell[29787, 755, 192, 3, 44, "Subsubsection",ExpressionUUID->"4f538592-ee63-45c8-8d09-f0c887f3e2bb"],
+Cell[29982, 760, 1114, 21, 31, "Text",ExpressionUUID->"b407e8dc-7224-4869-8674-23fa6b5e727a"],
+Cell[31099, 783, 1007, 29, 129, "Code",ExpressionUUID->"6de24bd4-e017-44f0-8565-631c6eea2762"],
+Cell[32109, 814, 279, 6, 35, "Text",ExpressionUUID->"e596b1fc-76fb-446a-9b1e-661d92d134d4"],
+Cell[32391, 822, 194, 3, 44, "Subsubsection",ExpressionUUID->"538cc635-46d2-4a2e-ab2d-a9bbca6a77b8"],
+Cell[32588, 827, 961, 24, 31, "Text",ExpressionUUID->"c3e8aadf-6515-4507-9a8b-a2a6b4d6626e"],
+Cell[33552, 853, 870, 18, 71, "Code",ExpressionUUID->"91dabb8d-c265-473a-8cdb-b447116011ca"],
+Cell[34425, 873, 358, 7, 35, "Text",ExpressionUUID->"027e3d71-3cfa-4b7f-a574-0f3b9d3e1537"],
+Cell[34786, 882, 197, 3, 44, "Subsubsection",ExpressionUUID->"51ace142-b4da-4349-8a61-7c03998908b9"],
+Cell[34986, 887, 1512, 29, 31, "Text",ExpressionUUID->"178541f4-b226-4935-a94d-98e24d4b3090"],
+Cell[36501, 918, 2237, 56, 98, "Code",ExpressionUUID->"1e3fd569-2ddf-4f2f-99ff-fa4c4478abb6"],
+Cell[38741, 976, 1069, 20, 81, "Text",ExpressionUUID->"92afa9b9-86e9-474d-9bc2-ef9e75681d1d"],
+Cell[39813, 998, 222, 4, 44, "Subsubsection",ExpressionUUID->"bb08fcc4-1ad9-4e69-b65e-e6b851f4626d"],
+Cell[40038, 1004, 1489, 26, 54, "Text",ExpressionUUID->"5e23a860-9429-4cf2-95e0-05e3d2019a75"],
+Cell[41530, 1032, 1341, 30, 112, "Code",ExpressionUUID->"512cdcbd-1a3b-4b28-974d-4f2ed0ca524d"],
+Cell[42874, 1064, 1957, 48, 183, "Code",ExpressionUUID->"fc711504-7334-4e71-898e-b222700f8280"],
+Cell[44834, 1114, 518, 9, 35, "Text",ExpressionUUID->"ebb6558e-99d2-46c6-8367-ca413c743975"],
+Cell[45355, 1125, 635, 10, 35, "Text",ExpressionUUID->"f72778ea-7924-4b6e-95df-e619607df2e6"],
+Cell[45993, 1137, 1674, 36, 104, "Text",ExpressionUUID->"1620ff94-e668-44c4-9f1a-1e5908826386"],
+Cell[47670, 1175, 712, 10, 81, "Text",ExpressionUUID->"32c3cf98-bf55-4120-905b-ff58513bee9b"]
+}
+]
+*)
+
